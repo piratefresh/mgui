@@ -1,0 +1,15 @@
+.mgui-card {
+  @apply flex flex-col bg-white rounded-md shadow-lg overflow-hidden relative;
+
+  border: 1px solid #e0e0e0;
+}
+
+.mgui-card-head {
+  @apply px-8 py-6 flex justify-between;
+
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mgui-card-content {
+  @apply p-8;
+}
