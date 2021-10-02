@@ -1,0 +1,14 @@
+.mgui-card-media {
+  position: relative;
+}
+
+.mgui-card-media::before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+  width: 100%;
+}
+
+.mgui-card-media-row {
+  padding-left: 300px;
+}

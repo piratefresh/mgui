@@ -1,0 +1,29 @@
+.mgui-related-articles-container {
+  @apply text-primary;
+  min-height: 450px;
+  width: 312px;
+}
+
+.mgui-related-articles-item {
+  @apply flex justify-between w-auto relative border-b pb-4;
+}
+
+.mgui-related-articles-picture {
+  @apply block;
+  padding-bottom: 100%;
+}
+
+.mgui-related-articles-content {
+  flex-grow: 1;
+}
+
+.mgui-related-articles-figure {
+  background-color: #fff;
+  margin: 0 18px 0 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-flex-basis: 90px;
+  flex-basis: 90px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}

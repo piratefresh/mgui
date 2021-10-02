@@ -8,6 +8,8 @@
   --text-base: #000000;
   --text-primary: #000000;
   --text-secondary: white;
+  --text-secondary-light: #71767f;
+  --text-secondary-dark: #878787;
 
   --hover: rgba(0, 0, 0, 0.075);
   --hover-1: rgba(0, 0, 0, 0.15);
@@ -17,7 +19,7 @@
   --red: #da3c3c;
   --purple: #f81ce5;
   --blue: #0070f3;
-
+  --mine-shaft: #222;
   --pink: #ff0080;
   --pink-light: #ff379c;
 
@@ -37,8 +39,10 @@
   --accent-8: #111111;
   --accent-9: #000;
 
-  --font-sans: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
-    "Helvetica", sans-serif;
+  --font-sans: PlusJakartaSans, -apple-system, system-ui, BlinkMacSystemFont,
+    "Helvetica Neue", "Helvetica", sans-serif;
+  --font-serif: adobe-garamond-pro, ui-serif, Georgia, Cambria,
+    "Times New Roman", Times, serif;
 }
 
 [data-theme="dark"] {
@@ -67,6 +71,20 @@
   --accent-0: #000;
 }
 
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("/fonts/PlusJakartaSans[wght].ttf");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PlusJakartaSans-Italic";
+  src: url("/fonts/PlusJakartaSans-Italic[wght].ttf");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 *,
 *:before,
 *:after {
@@ -74,6 +92,7 @@
 }
 
 html {
+  font-family: var(--font-sans);
   height: 100%;
   box-sizing: border-box;
   touch-action: manipulation;
@@ -94,6 +113,7 @@ body {
 }
 
 body {
+  font-family: var(--font-sans);
   position: relative;
   min-height: 100%;
   margin: 0;
@@ -101,6 +121,10 @@ body {
 
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul {
+  padding-left: 0px;
 }
 
 .animated {

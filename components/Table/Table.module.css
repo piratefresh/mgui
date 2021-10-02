@@ -1,0 +1,33 @@
+.mgui-table {
+  @apply w-full whitespace-nowrap;
+}
+
+.mgui-table-tr {
+  @apply focus:outline-none h-16 w-full text-sm leading-none text-gray-800;
+}
+
+.mgui-table-th {
+  @apply font-normal text-left pl-4;
+}
+
+.mgui-table-tbody-tr {
+  @apply focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100;
+}
+.mgui-table-tbody-tr-td {
+  @apply pl-4 cursor-pointer;
+}
+
+/* 
+    Pagination
+*/
+.mgui-table-pagination-container {
+  @apply flex flex-col lg:flex-row p-4 lg:p-8 justify-between items-start lg:items-stretch w-full;
+}
+.mgui-table-pagination-page-view {
+  @apply text-base text-gray-600;
+}
+
+.mgui-table-pagination-arrow {
+  @apply text-gray-600 border-transparent border rounded;
+  @apply focus:outline-none focus:ring-2 focus:ring-gray-500 cursor-pointer;
+}

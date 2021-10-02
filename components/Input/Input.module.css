@@ -1,0 +1,61 @@
+.mgui-input-container {
+  @apply relative;
+}
+
+.mgui-input {
+  @apply block border-solid pl-3 pr-3 py-2 w-full text-sm outline-none;
+  @apply bg-white border border-gray-300 hover:border-black;
+  @apply focus:outline-none;
+
+  /* box-shadow: 0 0 0 2px rgba(255, 255, 255, 0); */
+  font-family: inherit;
+  /* transition: box-shadow 0.3s ease-in-out; */
+}
+
+/* .mgui-input:focus {
+  box-shadow: 0 0 0 2px rgba(62, 207, 142, 0.1);
+} */
+
+.mgui-input--error {
+  @apply border-red-700 text-red-700 hover:text-red-700 hover:border-red-700 placeholder-red-700;
+}
+
+.mgui-input-error-text {
+  @apply text-red-700 hover:text-red-700;
+}
+
+.mgui-input--borderless {
+  @apply border-transparent shadow-none;
+}
+
+.mgui-input-actions-container {
+  @apply absolute inset-y-0 right-0 pl-3 pr-1 flex items-center;
+}
+
+/*
+  Input sizes
+*/
+
+.mgui-input--tiny {
+  @apply px-2.5 py-1.5 text-xs;
+}
+.mgui-input--small {
+  @apply px-3 py-2 text-sm leading-4;
+}
+.mgui-input--medium {
+  @apply px-4 py-2 text-sm;
+}
+.mgui-input--large {
+  @apply px-4 py-2 text-base;
+}
+.mgui-input--xlarge {
+  @apply px-6 py-3 text-base;
+}
+
+/*
+  Input icon
+*/
+
+.mgui-input--with-icon {
+  @apply pl-10;
+}

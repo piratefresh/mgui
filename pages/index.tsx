@@ -3,6 +3,15 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Card from "@components/Card";
+import { DataTable } from "@components/Table";
+import React from "react";
+import CardContent from "@components/CardContent";
+import CardMedia from "@components/CardMedia";
+import FavoriteOverlay from "@components/FavoriteOverlay";
+import Slider from "@components/Slider";
+import Typography from "@components/Typography";
+import Deck from "@components/Deck";
+import { DeckItem } from "@components/Deck/Deck";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +23,18 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <Deck onVote={(item: any, vote: any) => console.log(item.props, vote)}>
+          <DeckItem value="waffles" whileTap={1.15}>
+            🧇
+          </DeckItem>
+          <DeckItem value="pancakes" whileTap={1.15}>
+            🥞
+          </DeckItem>
+          <DeckItem value="donuts" whileTap={1.15}>
+            🍩
+          </DeckItem>
+        </Deck>
+
         <Card title="Header">test</Card>
       </main>
 

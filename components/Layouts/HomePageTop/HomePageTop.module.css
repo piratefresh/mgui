@@ -1,0 +1,48 @@
+.mgui-homepagetop-grid {
+  display: grid;
+  row-gap: 40px;
+  column-gap: 32px;
+  grid-template-columns: repeat(296px, 4);
+}
+
+.mgui-homepagetop-left-inner {
+  @apply relative;
+  grid-row: 1;
+  grid-column: 1;
+}
+.mgui-homepagetop-left-inner::after {
+  content: " ";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: block;
+  top: 0;
+  right: -16px;
+  left: auto;
+  bottom: auto;
+  width: 1px;
+  height: 100%;
+}
+
+.mgui-homepagetop-lead {
+  @apply relative;
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+.mgui-homepagetop-lead::after {
+  content: " ";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: block;
+  top: 0;
+  right: -16px;
+  left: auto;
+  bottom: auto;
+  width: 1px;
+  height: 100%;
+}
+
+.mgui-homepagetop-right-inner {
+  @apply relative;
+  grid-row: 1;
+  grid-column: 4;
+}

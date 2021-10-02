@@ -14,6 +14,11 @@ module.exports = {
       },
     },
   },
+  darkMode: "class",
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/typography"),
+  ],
   theme: {
     extend: {
       maxWidth: {
@@ -37,11 +42,46 @@ module.exports = {
         "accent-7": "var(--accent-7)",
         "accent-8": "var(--accent-8)",
         "accent-9": "var(--accent-9)",
+        "mine-shaft": {
+          DEFAULT: "#222222",
+          50: "#959595",
+          100: "#888888",
+          200: "#6F6F6F",
+          300: "#555555",
+          400: "#3C3C3C",
+          500: "#222222",
+          600: "#090909",
+          700: "#000000",
+          800: "#000000",
+          900: "#000000",
+        },
+        crimson: {
+          DEFAULT: "#E7131A",
+          50: "#FDE3E4",
+          100: "#FBCBCD",
+          200: "#F79C9F",
+          300: "#F36D71",
+          400: "#EF3E44",
+          500: "#E7131A",
+          600: "#B80F15",
+          700: "#890B0F",
+          800: "#5A070A",
+          900: "#2B0305",
+        },
       },
       textColor: {
         primary: "var(--text-primary)",
-        secondary: "var(--text-secondary)",
+        secondary: {
+          default: "var(--text-secondary)",
+          light: "var(--text-secondary-light)",
+          dark: "var(--text-secondary-dark)",
+        },
       },
+      "secondary-text": {
+        light: "var(--text-secondary-light)",
+        dark: "var(--text-secondary-dark)",
+      },
+
       boxShadow: {
         "outline-normal": "0 0 0 2px var(--accent-2)",
         magical:
@@ -52,6 +92,10 @@ module.exports = {
       },
       scale: {
         120: "1.2",
+      },
+      fontFamily: {
+        sans: "var(--font-sans)",
+        serif: "var(--font-serif)",
       },
     },
   },

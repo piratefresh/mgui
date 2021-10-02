@@ -1,4 +1,4 @@
-import { Title, Typography } from "@components/Typography";
+import { Typography, Title, Text } from "@components/Typography";
 import React from "react";
 import CardHeaderStyles from "./CardHeader.module.css";
 
@@ -21,14 +21,15 @@ const CardHeader = ({
 }: ICardHeader) => {
   console.log("cardheader: ", CardHeaderStyles);
   let classes = [CardHeaderStyles["mgui-card-head"]];
+  if (className) classes.push(className);
   let title = titleProp;
   if (title != null) {
-    <Title>{title}</Title>;
+    <Typography.Title level={4}>{title}</Typography.Title>;
   }
 
   let subheader = subheaderProp;
   if (subheader != null) {
-    <Typography>{subheader}</Typography>;
+    <Typography.Text>{subheader}</Typography.Text>;
   }
   console.log("classes: ", classes);
   return (

@@ -1,7 +1,9 @@
 .mgui-card {
-  @apply flex flex-col bg-white rounded-md shadow-lg overflow-hidden relative;
+  @apply flex bg-white rounded-md overflow-hidden relative;
+}
 
-  border: 1px solid #e0e0e0;
+.mgui-card-row {
+  min-height: 230px;
 }
 
 .mgui-card-head {

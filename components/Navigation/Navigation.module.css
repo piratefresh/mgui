@@ -1,0 +1,8 @@
+.mgui-nav-ul {
+  @apply flex flex-row mx-auto px-8;
+}
+
+.mgui-panel-container {
+  @apply grid gap-y-10 gap-x-8 py-16;
+  grid-template-columns: 2fr 1fr;
+}

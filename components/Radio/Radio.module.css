@@ -1,0 +1,109 @@
+.mgui-radio-fieldset {
+  @apply border-none p-0 m-0;
+}
+
+.mgui-radio-container {
+  @apply relative cursor-pointer flex p-4 border;
+}
+
+.mgui-radio-container--card {
+  @apply p-4 border border-solid border-gray-200;
+}
+
+.mgui-radio-container--card--active {
+  @apply bg-black bg-opacity-20 border-black z-10;
+}
+
+.mgui-radio-container--card:first-child {
+  @apply rounded-tl-md rounded-tr-md;
+}
+
+.mgui-radio-container--card:last-child {
+  @apply rounded-bl-md rounded-br-md;
+}
+
+.mgui-radio-label {
+  @apply flex flex-row cursor-pointer;
+}
+
+.mgui-radio-label-text {
+  @apply block text-sm font-medium;
+}
+
+.mgui-radio-label-text .mgui-radio__label-text-before,
+.mgui-radio-label-text .mgui-radio__label-text-after {
+  @apply text-gray-400;
+}
+
+.mgui-radio-label-description {
+  @apply block text-sm text-gray-400 m-0;
+}
+
+.mgui-radio {
+  @apply h-4 w-4 ml-0 mr-3.5 rounded-2xl border border-solid transition-all;
+
+  @apply text-black cursor-pointer border-gray-500;
+  @apply focus:ring-black hover:border-black focus:outline-none;
+
+  /* @apply dark:bg-transparent dark:hover:border-black; */
+}
+
+.mgui-radio:checked {
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mgui-radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+}
+
+.mgui-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  background-origin: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.mgui-radio-group-contents {
+  @apply rounded-md -space-y-px;
+}
+
+/*
+  Label sizes
+*/
+
+.mgui-radio-container--tiny .mgui-radio-label,
+.mgui-radio-container--tiny .mgui-radio-label-text,
+.mgui-radio-container--tiny .mgui-radio-label-description {
+  @apply text-xs;
+}
+.mgui-radio-container--small .mgui-radio-label,
+.mgui-radio-container--small .mgui-radio-label-text,
+.mgui-radio-container--small .mgui-radio-label-description {
+  @apply text-sm;
+}
+.mgui-radio-container--medium .mgui-radio-label,
+.mgui-radio-container--medium .mgui-radio-label-text,
+.mgui-radio-container--medium .mgui-radio-label-description {
+  @apply text-sm;
+}
+.mgui-radio-container--large .mgui-radio-label,
+.mgui-radio-container--large .mgui-radio-label-text,
+.mgui-radio-container--large .mgui-radio-label-description {
+  @apply text-base;
+}
+.mgui-radio-container--xlarge .mgui-radio-label,
+.mgui-radio-container--xlarge .mgui-radio-label-text,
+.mgui-radio-container--xlarge .mgui-radio-label-description {
+  @apply text-base;
+}

@@ -10,7 +10,7 @@
 
 .mgui-typography {
   @apply text-base;
-  @apply text-gray-400;
+  /* @apply text-gray-400; */
 }
 
 /* .mgui-typography--prose-sm {

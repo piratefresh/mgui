@@ -1,0 +1,15 @@
+.mgui-typography-price {
+  @apply text-base font-bold;
+}
+
+.mgui-typography-price-small {
+  @apply text-xs font-bold;
+}
+
+.mgui-typography-price-discount {
+  @apply text-sm text-secondary-light dark:text-secondary-dark;
+}
+
+.mgui-typography-price-sale {
+  @apply font-bold text-red-800;
+}

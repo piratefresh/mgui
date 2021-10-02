@@ -1,0 +1,51 @@
+.mgui-summaryitem-container {
+  @apply flex flex-col relative pb-6;
+}
+
+.mgui-summaryitem-container::after {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: calc(-1 * 2rem / 2);
+  background-color: rgb(229, 229, 229);
+  width: 1px;
+  height: calc(100% + 32px);
+  content: "";
+}
+
+.mgui-summaryitem-container-no-border-right {
+  @apply flex flex-col relative pb-6;
+}
+
+.mgui-aspectratio-container {
+  @apply relative ml-auto;
+  width: 44px;
+}
+.mgui-summary-picture-container {
+  @apply relative;
+}
+.mgui-summary-picture {
+}
+.mgui-aspectratio-container::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  width: 100%;
+}
+
+.mgui-picture {
+  inset: 0px;
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+}
+
+.mgui-summary-text {
+  @apply flex;
+}
+
+.mgui-summary-item-grid {
+  display: grid;
+  grid-template-columns: auto 86px;
+  grid-gap: 24px;
+}

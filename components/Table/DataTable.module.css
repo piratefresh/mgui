@@ -1,0 +1,7 @@
+.mgui-table-container {
+  @apply w-full sm:px-6;
+}
+
+.mgui-table-inner-container {
+  @apply bg-white shadow px-4 md:px-10 pt-4 md:pt-7 pb-5 overflow-y-auto;
+}

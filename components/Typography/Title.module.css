@@ -1,5 +1,5 @@
 .mgui-typography-title {
-  @apply text-gray-900;
+  @apply text-gray-900 font-medium;
 }
 
 h1.mgui-typography-title {
@@ -20,4 +20,11 @@ h4.mgui-typography-title {
 
 h5.mgui-typography-title {
   @apply text-base;
+}
+
+.mgui-typography-title-underlined::after {
+  @apply border-b border-gray-300;
+  content: "";
+  width: 100%;
+  display: block;
 }

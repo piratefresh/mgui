@@ -1,0 +1,6 @@
+.mgui-disclosure-button {
+  @apply flex flex-row w-full items-center py-4 px-4 mx-0 mb-2 bg-gray-100 uppercase font-semibold text-sm;
+}
+.mgui-disclosure-panel {
+  @apply text-gray-500 p-4;
+}

@@ -5,7 +5,19 @@ const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
   stories: ["../**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "storybook-css-modules-preset",
+    {
+      name: "@storybook/addon-postcss",
+      options: {
+        postcssLoaderOptions: {
+          implementation: require("postcss"),
+        },
+      },
+    },
+  ],
 
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -41,28 +53,28 @@ module.exports = {
       ],
     });
 
-    config.module.rules.push({
-      test: /\.(s*)css$/,
-      loaders: [
-        "style-loader",
-        {
-          loader: "css-loader",
-          options: {
-            importLoaders: 1,
-            modules: { auto: true },
-          },
-        },
-        {
-          loader: "postcss-loader",
-          options: {
-            postcssOptions: {
-              config: path.resolve(__dirname, "..", "postcss.config.js"),
-            },
-          },
-        },
-        "sass-loader",
-      ],
-    });
+    // config.module.rules.push({
+    //   test: /\.(s*)css$/,
+    //   loaders: [
+    //     "style-loader",
+    //     {
+    //       loader: "css-loader",
+    //       options: {
+    //         importLoaders: 1,
+    //         modules: { auto: true },
+    //       },
+    //     },
+    //     {
+    //       loader: "postcss-loader",
+    //       options: {
+    //         postcssOptions: {
+    //           config: path.resolve(__dirname, "..", "postcss.config.js"),
+    //         },
+    //       },
+    //     },
+    //     "sass-loader",
+    //   ],
+    // });
 
     // SVG
     // Needed for SVG importing using svgr

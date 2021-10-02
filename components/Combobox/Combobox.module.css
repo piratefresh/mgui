@@ -1,0 +1,8 @@
+.mgui-selection-button {
+  @apply relative w-full py-2 pl-3 pr-10 text-left bg-white border border-black cursor-default 
+  sm:text-sm;
+}
+
+.mgui-selection-option {
+  @apply w-full py-1 mt-1 overflow-auto text-base bg-white border border-black pl-0;
+}

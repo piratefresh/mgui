@@ -1,0 +1,7 @@
+.mgui-searchbox {
+  @apply w-full py-2 pr-12 pl-4 border border-black;
+}
+
+.mgui-search-icon {
+  @apply top-0 bottom-0 right-0 px-4 absolute;
+}

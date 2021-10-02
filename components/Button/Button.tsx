@@ -53,12 +53,12 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
     }: IButtonProps,
     ref
   ) => {
-    let classes = ["mgui-btn"];
+    let classes = [ButtonStyles["mgui-btn"]];
     console.log("type:: ", type);
-    classes.push(`mgui-btn-${type}`);
+    classes.push(ButtonStyles[`mgui-btn-${type}`]);
 
     if (size) {
-      classes.push(`mgui-btn--${size}`);
+      classes.push(ButtonStyles[`mgui-btn--${size}`]);
     }
 
     if (block) {
@@ -66,7 +66,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
     }
 
     if (danger) {
-      classes.push(ButtonStyles["sbui-btn--danger"]);
+      classes.push(ButtonStyles["mgui-btn--danger"]);
     }
 
     if (className) {

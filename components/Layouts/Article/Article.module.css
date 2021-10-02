@@ -1,0 +1,30 @@
+.mgui-article-body-root {
+  @apply text-xl;
+}
+
+.mgui-article-rubric {
+  @apply text-crimson text-sm mb-6 font-mono;
+}
+
+.mgui-article-lookup {
+  @apply px-0 mx-auto;
+  max-width: 665px;
+}
+
+.mgui-article-lead-figure {
+  @apply w-auto relative;
+  height: 70vh;
+}
+
+p.mgui-article-paragraph {
+  @apply px-0 mx-auto text-xl font-serif;
+  max-width: 665px;
+}
+
+.mgui-article-utility-bar {
+  @apply flex;
+}
+
+section.mgui-article-section {
+  @apply mb-8 p-0;
+}
