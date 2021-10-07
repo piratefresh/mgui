@@ -12,29 +12,30 @@ export type TItem = {
 
 export interface INavigationProps {
   navigation: {
-    categories: [
-      {
-        id: number | string;
-        name: string;
-        featured: [
-          {
-            name: string;
-            href: string;
-            imageSrc: string;
-            imageAlt: string;
-          }
-        ];
-        sections: [
-          {
-            id: string | number;
-            name: string;
-            items: TItem[];
-          }
-        ];
-      }
-    ];
-    pages: [{ name: string; href: string }];
+    categories: CategoriesEntity[] | null;
+    pages: ItemsEntityOrPagesEntity[] | null;
   };
+}
+export interface CategoriesEntity {
+  id: string;
+  name: string;
+  featured?: FeaturedEntity[] | null;
+  sections?: SectionsEntity[] | null;
+}
+export interface FeaturedEntity {
+  name: string;
+  href: string;
+  imageSrc: string;
+  imageAlt: string;
+}
+export interface SectionsEntity {
+  id: string;
+  name: string;
+  items?: ItemsEntityOrPagesEntity[] | null;
+}
+export interface ItemsEntityOrPagesEntity {
+  name: string;
+  href: string;
 }
 
 function classNames(...classes: string[]) {
@@ -45,6 +46,7 @@ export default function Navigation({ navigation }: INavigationProps) {
   const [showSubmenu, setShowSubmenu] = React.useState<boolean>(false);
   const ref = React.useRef(null);
   const handleClickOutside = () => {
+    console.log("outside");
     setShowSubmenu(false);
   };
   const handleShowSubmenu = () => {
@@ -55,18 +57,18 @@ export default function Navigation({ navigation }: INavigationProps) {
 
   useOnClickOutside(ref, handleClickOutside);
   return (
-    <nav className="bg-black w-full">
+    <nav className="bg-black w-full z-10" onMouseLeave={handleClickOutside}>
       {/* Links */}
 
       <Tab.Group
         as="div"
-        className="mt-2 bg-white"
+        className="bg-white"
         onChange={handleShowSubmenu}
         onMouseEnter={handleShowSubmenu}
       >
         <div className="">
           <Tab.List className="bg-mine-shaft -mb-px flex px-4 space-x-8">
-            {navigation.categories.map((category) => (
+            {navigation.categories?.map((category) => (
               <Tab
                 onMouseEnter={handleShowSubmenu}
                 key={category.name}
@@ -84,11 +86,11 @@ export default function Navigation({ navigation }: INavigationProps) {
         </div>
         {showSubmenu && (
           <Tab.Panels as={React.Fragment}>
-            {navigation.categories.map((category) => (
+            {navigation.categories?.map((category) => (
               <Tab.Panel key={category.name} className="mx-auto px-8 ">
                 <div className={NavigationStyles["mgui-panel-container"]}>
                   <div className="col-start-2 grid grid-cols-2 gap-x-8">
-                    {category.featured.map((item) => (
+                    {category.featured?.map((item) => (
                       <div key={item.name} className="group relative text-sm">
                         <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
                           <img
@@ -115,12 +117,12 @@ export default function Navigation({ navigation }: INavigationProps) {
                   </div>
                   <div
                     className={`row-start-1 grid ${
-                      category.sections.length <= 8
+                      category.sections && category.sections.length <= 8
                         ? `grid-cols-${category.sections.length}`
                         : "grid-cols-8"
                     } gap-y-10 gap-x-8 text-sm`}
                   >
-                    {category.sections.map((section) => (
+                    {category.sections?.map((section) => (
                       <div key={section.name}>
                         <p
                           id={`${category.id}-${section.id}-heading-mobile`}
@@ -133,7 +135,7 @@ export default function Navigation({ navigation }: INavigationProps) {
                           aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
                           className="mt-6 flex flex-col space-y-6 pl-0"
                         >
-                          {section.items.map((item) => (
+                          {section.items?.map((item) => (
                             <li key={item.name} className="flex">
                               <a
                                 href={item.href}

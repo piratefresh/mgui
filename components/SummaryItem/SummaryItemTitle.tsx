@@ -18,12 +18,12 @@ export default function SummaryItemAuthor({
   return (
     <div className="flex flex-row">
       <div className="flex flex-col pr-4">
-        <Typography.Text className="uppercase">
-          {title ? title : ""}
-        </Typography.Text>
         <Typography.Text type="subheader" className="uppercase">
           {subTitle ? subTitle : ""}
         </Typography.Text>
+        <Typography.Title level={3} className="uppercase">
+          {title ? title : ""}
+        </Typography.Title>
       </div>
     </div>
   );

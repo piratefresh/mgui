@@ -11,7 +11,7 @@
 }
 
 .mgui-typography-text-subheader {
-  @apply text-red-600;
+  @apply text-red-800;
 }
 
 .mgui-typography-text-success {

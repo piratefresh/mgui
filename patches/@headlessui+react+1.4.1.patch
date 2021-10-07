@@ -1,0 +1,12 @@
+diff --git a/node_modules/@headlessui/react/dist/components/tabs/tabs.esm.js b/node_modules/@headlessui/react/dist/components/tabs/tabs.esm.js
+index 7d9a790..391d74e 100644
+--- a/node_modules/@headlessui/react/dist/components/tabs/tabs.esm.js
++++ b/node_modules/@headlessui/react/dist/components/tabs/tabs.esm.js
+@@ -314,6 +314,7 @@ function Tab(props) {
+     onKeyDown: handleKeyDown,
+     onFocus: activation === 'manual' ? handleFocus : handleSelection,
+     onClick: handleSelection,
++    onMouseEnter: handleSelection,
+     id: id,
+     role: 'tab',
+     type: useResolveButtonType(props, internalTabRef),

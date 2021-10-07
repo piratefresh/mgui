@@ -68,6 +68,32 @@ export const Default = (args: IHomePageTopProps) => (
               <div className="text-sm font-semibold my-6">Emma Green</div>
             </CardContent>
           </Card>
+          <SummaryItem
+            className="mb-10 border-t"
+            borderRight={false}
+            borderBottom
+          >
+            <div className={SummaryItemStyles["mgui-summary-item-grid"]}>
+              <div className="flex flex-col">
+                <SummaryItemTitle
+                  title="Damian Lewis Discusses the Future of ‘Billions’"
+                  subTitle="Television"
+                />
+                <SummaryItemText className="p-0 leading-7">
+                  In an interview, the actor talked about his character’s big
+                  twist and what it means for the Showtime series and his
+                  career.
+                </SummaryItemText>
+              </div>
+              <SummaryItemPicture
+                className="w-20 h-14 self-center ml-auto"
+                imageUrl={`https://res.cloudinary.com/film-it/image/upload/v1632983797/211004_r39115web.webp`}
+              />
+              <Typography.Text className="font-semibold mt-3">
+                By Alexandra Schwartz
+              </Typography.Text>
+            </div>
+          </SummaryItem>
         </div>
       </HomePageTop.Lead>
       <HomePageTop.RightSide>
@@ -123,6 +149,24 @@ export const Default = (args: IHomePageTopProps) => (
                 By Alexandra Schwartz
               </Typography.Text>
             </div>
+          </SummaryItem>
+          <SummaryItem className="mb-10" borderRight={false} borderBottom>
+            <div className={SummaryItemStyles["mgui-summary-item-grid"]}>
+              <div className="flex flex-col">
+                <SummaryItemTitle title="" subTitle="Infinite Scroll" />
+                <SummaryItemText className="p-0 leading-7">
+                  Corporate America Is Failing Its Most Important Climate Test
+                  Yet
+                </SummaryItemText>
+              </div>
+              <SummaryItemPicture
+                className="w-20 h-20 self-center ml-auto"
+                imageUrl={`https://res.cloudinary.com/film-it/image/upload/v1632983838/chayka_americancore.webp`}
+              />
+            </div>
+            <Typography.Text className="font-semibold mt-3">
+              By Alexandra Schwartz
+            </Typography.Text>
           </SummaryItem>
           <SummaryItem className="mb-10" borderRight={false} borderBottom>
             <div className={SummaryItemStyles["mgui-summary-item-grid"]}>
